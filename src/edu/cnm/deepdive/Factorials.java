@@ -2,7 +2,13 @@ package edu.cnm.deepdive;
 
 public class Factorials {
 
-  public static long computeRecursive(int n) {
+  /**
+   *
+   * @param n
+   * @return the computed value of n!
+   * @throws IllegalArgumentException when n < 0.
+   */
+  public static long computeRecursive(int n) throws IllegalArgumentException {
     long result = 1;
     if (n < 0) {
       throw new IllegalArgumentException();
