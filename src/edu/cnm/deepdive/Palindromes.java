@@ -10,4 +10,14 @@ public class Palindromes {
     );
   }
 
+  public static boolean testDenormalized(String input) {
+    String normalized = input.replaceAll("[\\W_]+", "").toLowerCase();
+    return testRecursive(normalized);
+  }
+
+  public static boolean testIterative(String input) {
+    StringBuilder builder = new StringBuilder(input);
+    return input.equals(builder.reverse().toString()); // No good!
+  }
+
 }
